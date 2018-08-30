@@ -29,9 +29,3 @@ roi = fpkms_df.loc[:,"Sum"] > float(t)
 fpkms_df.loc[roi, fpkms_df.columns != "Sum"].to_csv(sys.stdout, sep="\t") 
 
 
-# fig, ( ax1, ax2 ) = plt.subplots(2)
-# ax1.hist( gene_lengths )
-# ax2.hist( gene_exons )
-#
-# fig.savefig("two_plots.png")
-# plt.close( fig )
