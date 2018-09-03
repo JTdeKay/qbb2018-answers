@@ -1,14 +1,15 @@
 #!/usr/bin/env python3
 
+"""
+Usage: ./approx-promoter.py <ctab file> <output bed file>
+"""
+
 import sys
-import pandas as pd
-import os
-import matplotlib.pyplot as plt
 
 f = open(sys.argv[1])
 
-my_dict = {}
-
+# skip header then iterate through each identifying + vs. - strands
+# Convert string entries to integers and add/subtract to define promoter region
 for line in f:
     if line.startswith("t_id"):
         continue
@@ -25,20 +26,8 @@ for line in f:
         p_start = end + 500
         p_end = end - 500
 
-    print(str(chromosome) + "\t" + str(start) + "\t" + str(end) + "\t" + t_name)
+#print statement for each transcript after promoter definition
 
-        
-
-# for index, row in df.intertuples():
-#     df = pd.read_csv(sys.argv[1], sep="\t")
-#     if "strand" == "+":
-#         start = row.loc[:, "strand"]
-#         p_start = int(start) -500
-#         df.loc[index, "start"] = p_end
-#         end = row.loc[, "strand"]
-#     start = int("start") -500
-
-#
-# coi = ctab_df.loc[:, ""]
+    print(str(chromosome) + "\t" + str(p_start) + "\t" + str(p_end) + "\t" + t_name)
      
          
