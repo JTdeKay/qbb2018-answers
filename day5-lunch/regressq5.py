@@ -47,8 +47,8 @@ print(res2)
 
 #define plot parameters and save to png file
 fig, ax = plt.subplots()
-n, bins, patches = plt.hist(res2, 500, density=True, facecolor="g", alpha=0.75)
-ax.set_xlim(-200,200)
+plt.hist(res2, bins=5000, facecolor="g", alpha=0.75)
+ax.set_xlim(-100,100)
 plt.xlabel("Histone Mod Load")
 plt.ylabel("FPKM")
 fig.savefig("histFPKM.png")
