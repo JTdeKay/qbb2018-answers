@@ -20,3 +20,6 @@
 # filter based on genotype quality and decompose complex haplotypes
 # vcffilter -f "QUAL > 20" freebayes_out.vcf | vcfallelicprimitives > results.vcf
 
+# load database for R64-1-1
+# snpEff download R64-1-1.86
+
