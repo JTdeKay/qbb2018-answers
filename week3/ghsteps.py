@@ -23,3 +23,6 @@
 # load database for R64-1-1
 # snpEff download R64-1-1.86
 
+# annotate vcf file
+# snpEff R64-1-1.86 results.vcf > results.ann.vcf
+
