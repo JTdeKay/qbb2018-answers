@@ -31,9 +31,9 @@ for i in open(sys.argv[1]):
 
 plt.ylabel("Contigs")        
 plt.xlabel("Reference")   
-ax.set_title("Contig position >= reference seq")  
+ax.set_title("Contig position compared to reference seq")  
 plt.tight_layout()    
 plt.xlim(0, 100000)
 plt.ylim(0, 120000)
-fig.savefig("dotplt1.png")
+fig.savefig("wk2plt1.png")
 plt.close(fig)
