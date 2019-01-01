@@ -75,9 +75,9 @@ print(ztest)
 
 fig, ax = plt.subplots()
 plt.scatter(range(0, len(ratio_list)), ratio_list, alpha = 0.5, s = 3, color ='blue')
-ax.set_ylabel("dN/dS")
-ax.set_xlabel("AA position")
-ax.set_title("Synon / nonsynon relative to AA position")
+ax.set_ylabel("ratio dN/dS")
+ax.set_xlabel("amino acid position")
+ax.set_title("Ratio of synonymous nonsynonymous nt changes based on amino acid position")
 
 plt.tight_layout()
 fig.savefig("wk1dS_dN.png")
